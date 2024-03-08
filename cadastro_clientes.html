@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="index.js"></script>
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+   
+    <h1>A Melhor Auto Peças</h1><br><br>
+ <div >
+    <fieldset id=""><legend>&nbsp;&nbsp;Cadastro de Clientes<br></legend><br>
+
+        <form id="formClientes" name="formClientes" method="post"  onsubmit="return campObrigatorio()"><br>
+    
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" class="required" autocomplete="off" style= "width:130px" 
+            placeholder="000.000.000-00" autocomplete="off" 
+            oninput="mascara(this, 'cpf')"> <br><br>
+
+
+
+
+
+
+            
+           <label for="name">Nome do Cliente:</label>  
+           <input type="text" id="nome"  name="nome"  maxlength="40" style= "width:350px"><br><br>
+    
+           <label for="nascimento">Data de Nascimento:</label>
+           <input type="date" name="nascimento" id="nascimento" style= "width:120px"><br><br>
+    
+           <label for="telefone">Telefone:</label>
+           <input type="text" name="telefone" id="telefone" class="required" autocomplete="off" placeholder="(00)0-0000-0000" oninput="mascara(this, 'telefone')" style="width:130px" >&nbsp;&nbsp;&nbsp;&nbsp;
+    
+           <label for="email">Email:</label>
+           <input type="email" name="email" id="email" placeholder="seuemail@.com"><br><br>
+    
+           <label for="sexo">Sexo:&nbsp;&nbsp;</label> 
+           <input type="radio" name="sexo" value="masculino">&nbsp;&nbsp;Masculino &nbsp;&nbsp;
+           <input type="radio" name="sexo" value="feminino">&nbsp;&nbsp;Feminino <br><br>
+           <hr> <br>
+    
+           <label for="endereco">Endereço:</label><br><br>
+
+
+
+    
+           <label for="cep">CEP:</label>
+           <input type="text" name="cep" id="cep" 
+            placeholder="00.000-000" autocomplete="off" 
+           oninput= "mascara(this,'cep')" style="width:100px" >&nbsp;&nbsp;&nbsp;&nbsp;
+    
+           
+           
+           
+           
+           
+           
+           <label for="rua">Rua:</label>
+           <input type="text" name="rua" id="rua">&nbsp;&nbsp;&nbsp;&nbsp;
+    
+           <label for="numero">Número:</label>
+           <input type="text" name="numero" id="numero" maxlength="5" placeholder="00000" style="width: 50px;"> <br><br><br>
+    
+           <label for="bairro">Bairro:</label>
+           <input type="text" name="bairro" id="bairro"> 
+    
+           <label for="cidade">Cidade:</label>
+           <input type="text" name="cidade" id="cidade"><br><br>
+    
+           <label for="estado">Estado:</label>
+           <select name="estado" id="select">
+            <option value="">Selecione o estado:</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="sp">São Paulo</option>
+            <option value="es">Espirito Santo</option>
+            <option value="ba">Bahia</option>
+            
+        </select><br><br><br><hr>
+        
+        <div class="botao_container">
+            
+            <button class="btn_retornar"><a href="index.html"> RETORNAR </a></button>
+        
+            <input class="btn_limpar" type="reset" name="limpar" value="LIMPAR">
+        
+            <input class="btn_enviar" type="submit"  onclick= "logar()" name="enviar" value="ENVIAR"><br><br>
+        
+        </div>
+        
+        
+       
+    
+    
+    
+    
+    
+    
+    
+        </form>
+    </fieldset>
+ </div>  
+
+
+
+<footer></footer>    
+</body>
+</html>
