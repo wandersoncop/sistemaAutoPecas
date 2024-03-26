@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script type="module" src="index.js"></script>
+    <title>cadastro de Vendas</title>
+</head>
+<body>
+     
+    <h1>A Melhor Auto Peças</h1><br><br>
+   
+    
+
+<!--<img id="banner" src="imagem/logo.jpg" alt="logotipo">
+    <p> <fieldset><legend>Legenda</legend>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Maxime aliquam dolorem sint a quos architecto commodi, veniam voluptas 
+        quam obcaecati velit placeat corporis quae mollitia reiciendis fugit 
+        alias incidunt amet?</fieldset></p>-->
+        <div id="cdFuncionario">
+            <fieldset ><legend>CADASTRO DE VENDAS</legend><br><br>
+                <label for="cod_produto">Cod.Produto:</label>  
+                <input type="text" id="nome" name="nome" maxlength="6" style= "width:60px">
+
+                <label for="quant.compra">Quantidade:</label>  
+                <input type="text" id="nome" name="nome" maxlength="6" style= "width:60px"><br><br>
+
+                <label for="venda">V.Unitario:</label>
+                <input type="text" name="venda" id="venda" placeholder="R$ 0.000,00" style="width: 100px;">
+                
+                <label for="venda">V. Total:</label>
+                <input type="text" name="venda" id="venda" placeholder="R$ 0.000,00" style="width: 100px;"><br><br>
+
+                <label for="produto">Produto:</label>  
+                <input type="text" id="nome" name="nome" maxlength="40" style= "width:350px"><br><br><hr><br>
+
+                <label for="cliente">Cliente:</label>  
+                <input type="text" id="nome" name="nome" maxlength="40" style= "width:350px"><br>
+                
+                <form  name="formFuncionario" method="post" ><br>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" maxlength="14" autocomplete="off" style= "width:130px" placeholder="000.000.000-00" aria-autocomplete="off" oninput="mascara(this, 'cpf')"> 
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" name="telefone" id="telefone" maxlength="15" autocomplete="off" placeholder="(00)0-0000-0000" style="width:130px" >&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+                    <label for="email">Email:</label>
+                   <input type="email" name="email" id="email" placeholder="seuemail@.com"><br><br><hr><br>
+                    
+                   <label for="venda">Valor da Venda:</label>
+                   <input type="text" name="venda" id="venda" placeholder="R$ 0.000,00" style="width: 100px;"><br><br>
+
+                    <label for="data_venda">Data da Venda</label>&nbsp;&nbsp;
+                    <input type="date" name="data_venda" id="data_venda">
+                    
+                    <label for="garantia">Garantia</label>&nbsp;&nbsp;
+                    <input type="text" name="garantia" id="garantia"><br><br>
+
+                    <label for="pagamento">Forma de Pagamento:</label>
+                    <select name="status" id="status">
+                        <option value="">Forma de Pagamento:</option>
+                        <option value="finalizada">Dinheiro</option>
+                        <option value="orçamento">Pix</option>
+                        <option value="cancelada">Cartão de Credito</option>
+                        
+                    </select><br><br>
+
+
+                    <label for="status">Status da Compra:</label>
+                    <select name="status" id="status">
+                        <option value="">Selecione o Status:</option>
+                            <option value="finalizada">Finalizada</option>
+                            <option value="orçamento">Orçamento</option>
+                            <option value="cancelada">Cancelada</option>
+                        
+                    </select><br><br><hr><br>
+
+                    
+
+            
+                    
+
+                   <label for="endereco">Endereço:</label><br><br>
+            
+                    <label for="rua">Rua:</label>
+                       <input type="text" name="rua" id="rua">&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                       <label for="numero">Número:</label>
+                       <input type="text" name="numero" id="numero" maxlength="5" placeholder="00000" style="width: 50px;"> <br><br>
+                
+                       <label for="bairro">Bairro:</label>
+                       <input type="text" name="bairro" id="bairro"> 
+                
+                       <label for="cidade">Cidade:</label>
+                       <input type="text" name="cidade" id="cidade"><br><br>
+
+                       
+                   
+                   
+                   
+                   
+                    
+                   
+                   
+                    
+
+                 
+                    
+                    
+                    
+               
+                
+                <div class="botao_container">
+                    
+                    <button class="btn_retornar"><a href="index.html"> RETORNAR </a></button>
+                
+                    <input class="btn_limpar" type="reset" name="limpar" value="LIMPAR">
+                
+                    <input class="btn_enviar" type="submit" name="enviar" value="ENVIAR"><br><br>
+                
+                </div>
+               
+            
+            
+            
+            
+            
+            
+            
+                </form>
+            </fieldset>
+        </div>
+
+
+
+<footer></footer>    
+</body>
+</html>

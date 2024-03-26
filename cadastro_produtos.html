@@ -11,10 +11,16 @@
     <h1>A Melhor Auto Peças</h1><br><br>
 		
 		<fieldset id="formulario"><legend> Cadastro de  Produtos!!!<br></legend>
-    <form  name="formClientes" method="post"><br>
+            <form  name="formClientes" method="post"><br>
+        
+        <label for="produto">Cod. Produto:</label>  
+        <input type="text" id="cod.produto" name="produto"
+        maxlength="6" style= "width:60px">
+        <br><br>
+       
+        <label for="produto">Produto:</label>  
+       <input type="text" id="produto" name="produto"><br><br>
 
-       <label for="item">Item:</label>  
-       <input type="text" id="item" name="item"><br><br>
 
        <label for="compra">Data da Compra:</label>
        <input type="date" name="compra" id="compra"><br><br>
@@ -23,7 +29,7 @@
        <input type="text" name="valor" id="valor" style= "width:100px" placeholder="R$ 0,000,00"> <br><br>
        
        <label for="venda">Valor para Venda:</label>
-       <input type="text" name="venda" id="venda" placeholder="R$ 0,000,00" style="width: 100px;"><br><br>
+       <input type="text" name="venda" id="venda" placeholder="R$ 0.000,00" style="width: 100px;"><br><br>
 
        <label for="desconto">Desconto:</label>
        <input type="text" name="desconto" id="desconto"><br><br>
