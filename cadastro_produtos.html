@@ -10,11 +10,16 @@
 <body>
     <h1>A Melhor Auto Peças</h1><br><br>
 		
-		<fieldset id="formulario"><legend> Cadastro de  Produtos!!!<br></legend>
-            <form  name="formClientes" method="post"><br>
+		<fieldset id="formulario"><legend>PRODUTOS<br></legend>
+            <form  name="produtos" method="post"><br>
         
         <label for="produto">Cod. Produto:</label>  
         <input type="text" id="cod.produto" name="produto"
+        maxlength="6" style= "width:60px">
+        <br><br>
+
+        <label for="estoq_produto">Estoq. Produto:</label>  
+        <input type="text" id="estoq_produto" name="estoq_produto"
         maxlength="6" style= "width:60px">
         <br><br>
        
@@ -28,12 +33,6 @@
        <label for="valor">Valor da Compra:</label>
        <input type="text" name="valor" id="valor" style= "width:100px" placeholder="R$ 0,000,00"> <br><br>
        
-       <label for="venda">Valor para Venda:</label>
-       <input type="text" name="venda" id="venda" placeholder="R$ 0.000,00" style="width: 100px;"><br><br>
-
-       <label for="desconto">Desconto:</label>
-       <input type="text" name="desconto" id="desconto"><br><br>
-
        <label for="quantidade">Quantidade Comprada:</label>
        <input type="number" name="quantidade" id="quantidade"><br><br>
 
