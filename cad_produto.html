@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
+    <script type="module" src="index.js"></script>
+    <title>tela inicial</title>
+</head>
+<body>
+    <h1>A Melhor Auto Peças</h1>
+    <div class="container">
+        <h2>Cadastro de Produtos</h2>
+        <form action="enviar_produto.php" method="POST" >
+
+            <div class="form-group">
+                <label for="codigo_produto">Cod. Produto:</label>  
+                <input type="text" id="codigo_produto" name="codigo_produto"
+                maxlength="6" style= "width:60px">
+            </div> 
+
+            <div class="form-group">
+                 <label for="estoq_produto">Estoq. Produto:</label>  
+                <input type="text" id="estoq_produto" name="estoq_produto"
+                maxlength="6" style= "width:60px">
+            </div>
+
+            <div class="form-group">
+                <label for="produto">Produto:</label>  
+                <input type="text" id="produto" name="produto"><br><br>
+            </div>
+
+            <div class="form-group">
+                <label for="data_compra">Data da Compra:</label>
+                <input type="date" name="data_compra" id="data_compra">
+            </div> 
+
+            <div class="form-group">
+                <label for="valor_compra">Valor da Compra:</label>
+                <input type="text" name="valor_compra" id="valor_compra" style= "width:100px" placeholder="R$ 0,000,00">
+            </div>          
+
+            <div class="form-group">
+                <label for="quantidade_comprada">Quantidade Comprada:</label>
+                <input type="number" name="quantidade_comprada" id="quantidade_comprada">
+            </div>
+
+            <div class="form-group">
+                <label for="forma_pagamento">Forma de Pagamento:</label><br>
+                <select name="forma_pagamento" id="select">
+                    <option value="forma_pagamento">Forma de Pagamento:</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="transferencia">Tranferência</option>
+                    <option value="orcamento">Cartão</option>         
+                </select>
+            </div>            
+
+            <div class="form-group">
+                <label for="estado">Status da Compra:</label><br>
+                <select name="status_compra" id="select">
+                    <option value="">Status da Compra:</option>
+                    <option value="concluida">Concluida</option>
+                    <option value="cancelada">Cancelada</option>
+                    <option value="orcamento">Orçamento</option>         
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="estado_comp">Estado:</label><br>
+                <select name="estado_comp" id="select">
+                    <option value="">Selecione o estado:</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sp">São Paulo</option>
+                </select>
+            </div><br><br><br>
+
+
+
+            
+            <div class="botoes">
+                <button type="submit" class="btn_retornar" > <a href="index.html">Retornar</a></button>
+                <button type="submit" class="btn_enviar">Enviar</button>
+                <button type="reset" class="btn_limpar">Limpar</button>
+            </div><br>
+        </form>
+    </div>
+</body>
+</html>

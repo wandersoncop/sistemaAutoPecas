@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
+    <script type="module" src="index.js"></script>
+    <title> Cadastro de Compra</title>
+</head>
+<body>
+    <h1>A Melhor Auto Peças</h1>
+    <div class="container">
+        <h2>Cadastro de Compra </h2>
+        <form action="enviar_compra.php" method="POST" > 
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" class="required" autocomplete="off" style= "width:95px" 
+                placeholder="000.000.000-00" autocomplete="off" 
+                oninput="mascara(this, 'cpf')"> <br>  
+                  
+            </div>
+
+            
+
+            <div class="form-group">
+                <label for="codigo_venda">Cod. Venda:</label>  
+                <input type="text" id="codigo_venda" name="codigo_venda"
+                maxlength="6" style= "width:60px">
+            </div> 
+
+            <div class="form-group">
+                 <label for="Quantidade">Quantidade:</label>  
+                <input type="text" id="quantidade" name="quantidade"
+                maxlength="6" style= "width:60px">
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor Unitário:</label>
+                <input type="text" name="valor" id="valor" style= "width:100px" placeholder="R$ 0,000,00">
+            </div>          
+
+
+            <div class="form-group">
+                <label for="produto">Produto:</label>
+                <input type="text" name="produto" id="produto" style= "width:98%" >
+            </div>  
+         
+
+            <div class="form-group">
+                <label for="data_compra">Data da Compra:</label>
+                <input type="date" name="data_compra" id="data_compra" style= "width:120px">
+            </div> 
+
+
+           
+
+            <div class="form-group">
+                <label for="forma_pagamento">Forma de Pagamento:</label><br>
+                <select name="forma_pagamento" id="select">
+                    <option value="forma_pagamento">Forma de Pagamento:</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="transferencia">Tranferência</option>
+                    <option value="orcamento">Cartão</option>         
+                </select>
+            </div>            
+
+            <div class="form-group">
+                <label for="status_compra">Status da Compra:</label><br>
+                <select name="status_compra" id="select">
+                    <option value="">Status da Compra:</option>
+                    <option value="concluida">Concluida</option>
+                    <option value="cancelada">Cancelada</option>
+                    <option value="orcamento">Orçamento</option>         
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado:</label><br>
+                <select name="estado" id="select">
+                    <option value="">Selecione o estado:</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sp">São Paulo</option>
+                </select>
+            </div><br><br><br>
+
+
+
+            
+            <div class="botoes">
+                <button type="submit" class="btn_retornar" > <a href="index.html">Retornar</a></button>
+                <button type="submit" class="btn_enviar"  a href="cad_compra.html" >Enviar</button>
+                <button type="reset" class="btn_limpar">Limpar</button>
+            </div><br>
+        </form>
+    </div>
+</body>
+</html>

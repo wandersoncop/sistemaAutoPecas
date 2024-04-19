@@ -1,12 +1,177 @@
+/*começo pagina inicial*/
 *{
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #716a6a;
 }
-body{
-    background: #F8EFBA;
-    font-family: arial, helvetica, sans-serif;
-    font-size: 16px;
+#banner{
+    margin-top: 1%;
+    max-width: 100%;
+    height: auto;
 }
+nav{
+    background:#1b1b1b;
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav .logo{
+    float: left;
+    color: rgb(218, 152, 19);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    background:#1b1b1b;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 22px;
+    padding: 8px 15px;
+}
+nav ul li a:hover{
+    color: rgb(218, 152, 19);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(218, 152, 19)
+                0 0 5px rgb(218, 152, 19);
+}
+nav ul ul li a:hover{
+    color: rgb(218, 152, 19);
+    box-shadow: none;
+}
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid rgb(218, 152, 19);
+    opacity: 0;
+    visibility: hidden;  
+    transition: .3s;  
+}
+nav ul ul ul{
+    border-top: none;
+}
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solod rgba(0, 0, 0, 0.3);
+}
+nav ul  ul li a{
+    line-height: 50px;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+span .fa-plus{
+    margin-left: 40px;
+    font-size: 15px;
+    color: rgb(218, 152, 19);
+}
+.show, .icon {
+    display: none;
+    color: rgb(218, 152, 19);
+}
+.menu_check{
+    display: none;
+    color: rgb(218, 152, 19);
+}
+@media all and (max-width:968px){
+    nav ul{
+        margin-right: 0px;
+        float: left;
+    }
+    nav .logo{
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li, nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul ul{
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul ul li{      
+        position: static;
+    }
+    nav ul ul li{
+        border-bottom: opx;
+    }
+    nav ul ul a{
+        padding-left: 40px;
+    }
+    nav ul ul ul a{
+        padding-left: 80px;
+    }
+    .show{
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover{
+        color:rgb(218, 152, 19);
+    }
+    .icon{
+        display: block;
+        color:  rgb(218, 152, 19);
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+    .show + a, ul{
+        display: none;
+    }
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+}
+/*fim pagina inicial*/
+
+/*começo pagina cad_cliente*/
+
 
 h1{ /*barra com o nome da empresa*/
     background: #3c3c3c;
@@ -14,232 +179,280 @@ h1{ /*barra com o nome da empresa*/
     color:#ffb200;
     font-size: 50px;
     width: 100%;
-    height: 0%;
-    padding: 20px;
-}
-input,select{
-    font-size: 16px;
-    border-radius: 8px;
-    border: none;
+    height: 20%;
     padding: 5px;
-    
+    margin-top: 0%;
 }
-.menu{
-    list-style:none;
-    border:1px solid #807d7d;
-    float:left;
- 
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    margin-top: -1%;
+    padding: 20px;
+    background-color: #9ceabf;
+    border-radius: 8px;
 }
-.menu li{
-    position:relative;
-    float:left;
-    border-right:1px solid #c0c0c0;
-    
-}
-.menu li a{
-    color:#333; 
-    text-decoration:none; 
-    padding:5px 10px; 
-    display:block;
-    font-size: 22px;
-}
-
-.menu li a:hover{
-    background:#333;
-    color:#fff;
-    box-shadow:0 3px 10px 0 #CCC;
-    box-shadow:0 3px 10px 0 #ccc;
-    text-shadow:0px 0px 5px #fff;
-}
-.menu li  ul{
-    position:absolute;
-    top:35px;
-    left:0;
-    background-color:#fff;
-    display:none;
-    width: 176px;
-}
-.menu li:hover ul{
-    display:block;
-}
-.menu li ul li{
-    border:1px solid #c0c0c0;
-    display:block;
-    width:175px;
-}
-
-.botao_container {/*div pai dos botoes retornar, limpar e enviar*/
-    
-    display: inline;
-       justify-content:space-between;
-    
-  
-    position: absolute;
-    top: 115%;
-    height: 50%;
-    left: 50%;
-    transform:translate(-50%,-50%); 
-   
-    
-}
-
-
-
-.btn_limpar{/*botão limpar*/
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bolder;
-    background-color: rgb(1, 87, 157);
-    border: 1px solid rgb(1, 87, 157);
-    cursor: pointer;
-    color: white;
-    text-decoration: none;    
-    border-radius: 10px;
-    margin-left: 1px ;
-    height: 40px;
-    
-}
-.btn_limpar:hover {/*botão enviar*/
-    border: 1px solid rgb(76, 158, 206);
-    background-color: rgb(76, 158, 206);
-    color: #303030;
-    transition: 0.9s;
-}
-
-.btn_enviar{  /*botão enviar*/
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bolder;
-    background-color: rgb(8, 67, 33);
-    border: 1px solid rgb(8, 67, 33);
-    cursor: pointer;
-    color: white;
-    text-decoration: none;    
-    border-radius: 10px;
-    margin-left: 1px ;
-    height: 40px;
-    
-}
-
-.btn_enviar:hover {/*botão enviar*/
-    border: 1px solid springgreen;
-    background-color: springgreen;
-    color: #303030;
-    transition: 0.9s;
-}
-.btn_retornar{/*botão retornar*/
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bolder;
-    background-color:orangered;
-    border: 1px solid orangered;
-    cursor: pointer;
-    text-decoration: none;    
-    border-radius: 10px;
-    height: 40px;
-   
-    
-}
-.btn_retornar:hover {/*botão enviar*/
-    border: 1px solid rgb(218, 152, 19);
-    background-color: rgb(218, 152, 19);
-    color: #303030;
-    transition: 0.9s;
-}
-.btn_retornar a{/*botão retornar texto*/
-   
-    text-decoration: none;  
-    color: rgb(255, 255, 255); 
-    
-    
-}
-
-.btn_retornar a:hover{/*botão retornar texto*/
-    
-    color: #303030;
-    transition: 0.9s;
-    
-    
-    
-   
-  
-    
-   
-
-}
-
-fieldset { 
-
-    max-width: 600px;
-    width: 100%;
-    position: absolute;
-    top: 56%;
-    height: 50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
-    font-size: 20px;
-    border: 1px solid rgb(121, 201, 127);
-    height: 85%;
-    width: 35%;
-    padding: 10px;
-    background-color:rgb(121, 201, 127);
-    border-radius: 10px;
-    
-}
-
-legend{
-    border: 2px solid #ffb200;
-    padding:  10px;
+h2 {
     text-align: center;
-    background-color: white;
-    border-radius: 15px;
-    color: #303030;
-    font-weight: bolder;
-   
- }
-
-.tela_login{/*tela de login*/
-    background-color: #3c3c3c;
-    position: absolute;
-    top: 35%;
-    height: 50%;
-    left: 83%;
-    transform:translate(-50%,-50%);
-    padding: 80px;
-    height: auto;
-    border-radius: 15px;
-    color: white;
-  
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fff;
 }
-
-.login{/*tela de login*/
-    padding: 15px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    border-radius: 15px;
-    width: 300px;
-    
+.form-group {
+    margin-bottom: 20px;    
 }
-.entra{/*tela de login*/
-    background-color: rgb(43, 64, 170);
-    cursor: pointer;
-    border-color: rgb(43, 64, 170);
-    border-radius: 15px;
-    padding: 15px;
+.form-group input {
+    margin-bottom: 20px;
+}
+.botoes{
+    text-align: center;
+}
+label {
+    display: block;
+    font-weight: bold;
+}
+ input{
     width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    border: none;
-    
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
-
-.entra:hover{/*tela de login*/
-    background-color:green;
-    border-color: green;
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 20%;
+    display: inline;
+    text-align: center;
+}
+.btn_retornar{
+    background-color: red;
+}
+.btn_retornar a{
+    color:#fff; ;
+    text-decoration: none;
+}
+.btn_retornar:hover{
+    background-color: rgb(203, 103, 98);
+    transition: 0.9s;
+}
+.btn_enviar{
+    background-color: rgb(13, 79, 57);
+}
+.btn_enviar:hover{
+    background-color: rgb(18, 214, 122);
+    transition: 0.9s;
+}
+.btn_limpar{
+    background-color: rgb(18, 87, 127);
+}
+.btn_limpar:hover{
+    background-color: rgb(18, 194, 214);
     transition: 0.9s;
 }
 
-.cdFuncionario{
-    background-color:green;
+
+/*inicio carrocel de iamgen*/
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+.slides{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    
+}
+/*fim carrocel de iamgen*/
+
+
+
+
+.container_carrocel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
+}
+
+.card{
+    background-color: #ffb200;
+    width: 150px;
+    height: 330px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+   
+}
+.card img{
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 50%;
+}
+.card h1{
+    font-size: 1.2rem;
+}
+.card h2{
+    font-size: .9rem;
+    color: #479e05f3;
+}
+
+.card button{
+    background-color: #2192ff;
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.card button:hover{
+    background-color: #137de8;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contato{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 45px;
+    background: #1d1d2e;
+    width: 500px;
+    height: 650px;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    border-radius: 10px;
+   
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+section h4{
+    color: #f2eaea;
+    font-size: 2.5rem;
+    margin: 2rem;
+    padding: 10px;
+}
+section form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+label{
+    color: rgba(13, 12, 12, 0.96);
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+form input{
+    padding: 15px;
+    outline: none;
+    border: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+form input:focus{
+    border-radius: 16px;
+}
+form textarea{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+form textarea:focus{
+    border-radius: 16px;
+}
+form button{
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    transition: all 1s;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    width: 100px;
+    
+    
+}
+form button:hover{
+    background: #f5f5f5;
+    color: #101026;
+    border-radius: 16px;
+}
+
+.botaoContato{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contato label{
+    color: rgb(249, 240, 240);
+    font-size: 15px;
+}
+
+
+/*Página do Obrigado*/
+
+.main{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background: #101026;
+   flex-direction: column;
+}
+.text{
+    font-size: 45px;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+.paragrafo{
+    color: #f5f5f5;
+    margin-bottom: 50px;
+}
+.btn{
+    padding: 15px 55px;
+    background: #f5f5f5;
+    text-decoration: none;
+    color: #101026;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+.btn:hover{
+    border-radius: 16px;
 }
